@@ -1,0 +1,15 @@
+# Author: Carmen Rianna C. Rebamba
+
+divider = ("=" * 40)
+
+print(f"{divider}\n\tEXPENSE TRACKER\n\t\"Ang mahal\" to \"May Gcash?\"\n{divider}")
+
+print("\nWelcome! This is your personal expense tracker.\n")
+
+print("MAIN MENU")
+print("  [1] Add an expense\t\t(coming soon)")
+print("  [2] View all expenses\t\t(coming soon)")
+print("  [3] Show total spent\t\t(coming soon)")
+print("  [4] Exit\t\t\t(coming soon)\n")
+
+print(("-" * 40), f"\nMade by: Carmen Rianna C. Rebamba | Installment 1\n{divider}") 
