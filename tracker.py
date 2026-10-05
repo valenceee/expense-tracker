@@ -1,4 +1,4 @@
-# Project Installment 2,  Author: Carmen Rianna C. Rebamba
+# Project Installment 3,  Author: Carmen Rianna C. Rebamba
 
 divider = ("=" * 40)
 divider2 = ("-" * 40)
@@ -14,25 +14,41 @@ print("  [4] Exit\t\t\t(coming soon)\n")
 name = input("What's your name? ")
 print(f"Welcome, {name}! Let's log two expenses.\n")
 
+subtotal = 0
+
 item1 = input("First expense? ")
 amount1 = float(input("Amount? "))
+subtotal = amount1
+
 item2 = input("Second expense? ")
 amount2 = float(input("Amount? "))
-total = amount1 + amount2
-average = (amount1 + amount2) / 2
+subtotal += amount2
+average = (subtotal) / 2
+
+tax_percent = float(input("Tax rate %? "))
+tax = subtotal * (tax_percent * 0.01)
+total = subtotal + tax
+
+budget = float(input("Your budget? "))
+over_budget = bool(budget < total)
+left = (budget - total)
 
 
 print(f"\n{divider2}\nSUMMARY")
 
 print(f"  - {item1}: \t\t${amount1}")
 print(f"  - {item2}: \t\t${amount2}")
-print(f"Total spent:\t\t${total}")
+print(f"Subtotal:\t\t${subtotal}")
 print(f"Average:\t\t${average}")
+print(f"Tax ({tax_percent}%):\t\t${tax}")
+print(f"Grand Total:\t\t${total}")
+print(f"Over budget?\t\t{over_budget}")
+print(f"Left in budget:\t\t${left}")
 
 print(f"{divider2}")
 
 
-print("Made by: Carmen Rianna C. Rebamba | Installment 2") 
+print("Made by: Carmen Rianna C. Rebamba | Installment 3") 
 
 
 
