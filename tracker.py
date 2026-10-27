@@ -1,4 +1,4 @@
-# Project Installment 3,  Author: Carmen Rianna C. Rebamba
+# Project Installment 4,  Author: Carmen Rianna C. Rebamba
 
 divider = ("=" * 40)
 divider2 = ("-" * 40)
@@ -18,10 +18,33 @@ subtotal = 0
 
 item1 = input("First expense? ")
 amount1 = float(input("Amount? "))
+
+if amount1 > 200:
+    print("  Huge expense - are you sure?")
+elif amount1 > 100:
+    print("  Big expense.")
+elif amount1 > 50:
+    print("  Moderate expense.")
+else:
+    print("  Small expense.")
+
 subtotal = amount1
 
 item2 = input("Second expense? ")
 amount2 = float(input("Amount? "))
+
+if amount2 > 200:
+    print("  Huge expense - are you sure?")
+elif amount2 > 100:
+    print("  Big expense.")
+elif amount2 > 50:
+    print("  Moderate expense.")
+else:
+    print("  Small expense.")
+
+if amount1 > 100 and amount2 > 100:
+    print("Two big expenses in a row - slow down!")
+
 subtotal += amount2
 average = (subtotal) / 2
 
@@ -42,13 +65,17 @@ print(f"Subtotal:\t\t${subtotal}")
 print(f"Average:\t\t${average}")
 print(f"Tax ({tax_percent}%):\t\t${tax}")
 print(f"Grand Total:\t\t${total}")
-print(f"Over budget?\t\t{over_budget}")
-print(f"Left in budget:\t\t${left}")
+if over_budget:
+    print(f"Overbudget by ${(total - budget)}!")
+elif total >= (0.9 * budget): 
+    print(f"Careful: Only ${(left)} left.")
+else: 
+    print(f"Within budget. ${(left)} left.")
 
 print(f"{divider2}")
 
 
-print("Made by: Carmen Rianna C. Rebamba | Installment 3") 
+print("Made by: Carmen Rianna C. Rebamba | Installment 4") 
 
 
 
